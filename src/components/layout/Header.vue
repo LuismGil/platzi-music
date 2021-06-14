@@ -3,12 +3,14 @@
     .hero-head
       header.navbar
         .container
-          .nav-start
-            .nav-item
+          .navbar-start
+            .navbar-item
               strong Platzi Music
-          .nav-end.navbar-menu
-            router-link.nav-item(:to="{ name: 'search' }") Buscar
-            router-link.nav-item(to="/about") Nosotros
+          .navbar-end.navbar-menu
+            a.navbar-item(@click="selectLang('en')") 🏴󠁧󠁢󠁥󠁮󠁧󠁿  
+            a.navbar-item(@click="selectLang('es')") 🇪🇸 
+            router-link.navbar-item(to="search") {{ $t('search')}}
+            router-link.navbar-item(to="about") {{ $t('about') }}
         
       .hero-body
         .container.has-text-centered
@@ -21,7 +23,13 @@
 import PmPlayer from '@/components/Player.vue'
 
 export default {
-  components: { PmPlayer }
+  components: { PmPlayer },
+
+  methods: {
+    selectLang (lang) {
+      this.$i18n.locale = lang
+    }
+  }
 }
 
 </script>
