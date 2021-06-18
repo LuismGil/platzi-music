@@ -4,7 +4,7 @@ This project was developed for educational purposes, in order to largely impleme
 
 Deployment performed in [Netlify](https://www.netlify.com/)
 
-see the result in the following link -> [Platzi Music](platzi-music-luis.netlify.app)
+see the result in the following link -> [Platzi Music](https://platzi-music-luis.netlify.app/)
 
 
 
